@@ -7,9 +7,10 @@
 use Tester\Assert;
 
 
-function testRouteIn(Nette\Application\IRouter $route, $url, $expectedPresenter = NULL, $expectedParams = NULL, $expectedUrl = NULL)
+function testRouteIn(Nette\Application\IRouter $route, $url, $expectedPresenter = NULL, $expectedParams = array(), $expectedUrl = NULL)
 {
 	$url = new Nette\Http\UrlScript("http://example.com$url");
+	$url->setScriptPath('/');
 	$url->appendQuery(array(
 		'test' => 'testvalue',
 		'presenter' => 'querypresenter',
