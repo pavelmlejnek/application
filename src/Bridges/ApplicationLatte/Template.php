@@ -79,7 +79,7 @@ class Template extends Nette\Object implements Nette\Application\UI\ITemplate
 	 * Registers run-time filter.
 	 * @param  string|NULL
 	 * @param  callable
-	 * @return self
+	 * @return Latte\Engine
 	 */
 	public function addFilter($name, $callback)
 	{
@@ -117,7 +117,7 @@ class Template extends Nette\Object implements Nette\Application\UI\ITemplate
 
 	/**
 	 * Sets translate adapter.
-	 * @return self
+	 * @return static
 	 */
 	public function setTranslator(Nette\Localization\ITranslator $translator = NULL)
 	{
@@ -141,7 +141,7 @@ class Template extends Nette\Object implements Nette\Application\UI\ITemplate
 	/**
 	 * Sets the path to the template file.
 	 * @param  string
-	 * @return self
+	 * @return static
 	 */
 	public function setFile($file)
 	{
@@ -161,7 +161,7 @@ class Template extends Nette\Object implements Nette\Application\UI\ITemplate
 
 	/**
 	 * Adds new template parameter.
-	 * @return self
+	 * @return static
 	 */
 	public function add($name, $value)
 	{
@@ -176,7 +176,7 @@ class Template extends Nette\Object implements Nette\Application\UI\ITemplate
 	/**
 	 * Sets all parameters.
 	 * @param  array
-	 * @return self
+	 * @return static
 	 */
 	public function setParameters(array $params)
 	{

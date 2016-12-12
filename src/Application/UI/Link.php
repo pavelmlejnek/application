@@ -51,7 +51,7 @@ class Link extends Nette\Object
 	 * Changes link parameter.
 	 * @param  string
 	 * @param  mixed
-	 * @return self
+	 * @return static
 	 */
 	public function setParameter($key, $value)
 	{
