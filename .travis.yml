@@ -18,7 +18,7 @@ matrix:
 
 script:
     - vendor/bin/tester -p $PHP_BIN tests -s
-    - php code-checker/src/code-checker.php
+    - php code-checker/src/code-checker.php -i snippet.latte
 
 after_failure:
     # Print *.actual content
