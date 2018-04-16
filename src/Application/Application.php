@@ -174,6 +174,15 @@ class Application
 	{
 		return $this->requests;
 	}
+	
+	
+	/**
+	 * Returns HTTP Request.
+	 */
+	public function getHttpRequest(): IRequest
+	{
+		return $this->httpRequest;
+	}
 
 
 	/**
